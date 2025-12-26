@@ -14,6 +14,10 @@
 
 <!-- HEADER -->
 <div class="header">
+  <div class="mobile-header">
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <h3></h3>
+</div>
   <div class="logo">
     <img src="./assets/capminds-logo.png" alt="Capminds" height="32">
 
@@ -100,10 +104,20 @@
       </div>
   </div>
 </div>
+
+
+
 <script>
-    function toggleSidebar() {
-  document.getElementById("sidebar").classList.toggle("collapsed");
-}
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("open");
+  }
+
+  function closeSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.remove("open");
+  }
+
 </script>
 <script src="./js/data.js"></script>
 <script src="./js/modal.js"></script>
