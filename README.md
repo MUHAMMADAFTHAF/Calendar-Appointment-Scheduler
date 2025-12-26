@@ -56,7 +56,7 @@ Modal stays centered on all devices
 
 Responsive for mobile, tablet & desktop
 
-github pages link :
+github pages link :https://muhammadafthaf.github.io/Calendar-Appointment-Scheduler/dashboard.html
 
 
 
