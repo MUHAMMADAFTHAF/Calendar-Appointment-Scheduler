@@ -54,8 +54,10 @@ Calendar grid adapts to screen size
 
 Modal stays centered on all devices
 
+Responsive for mobile, tablet & desktop
+
 github pages link :
 
 
-Responsive for mobile, tablet & desktop
+
 
