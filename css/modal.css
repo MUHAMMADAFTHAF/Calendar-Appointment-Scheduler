@@ -1,0 +1,214 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-overlay.active{
+    display: flex;
+}
+.modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 760px;   
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 18px 40px rgba(2,6,23,0.15);
+}
+
+
+/* HEADER */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+.modal-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.close-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* FORM */
+.modal-form {
+  margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  width: 100%;
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* inputs with icon */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;               /* FIGMA HEIGHT */
+  padding: 0 10px;
+  border: 1px solid #e6e9ee;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.input-row .icon {
+  width: 16px;
+  height: 16px;
+  background: transparent;   /* no box */
+  color: #6b7280;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+
+/* Custom placeholder inside input-row (over the input) */
+
+input, select {
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding: 0 6px;
+  background: transparent;
+}
+
+
+/* Make select elements visually match the patient input */
+.input-row select {
+  /* padding: 10px 12px;
+  border: 1px solid #e6e9ee;
+  border-radius: 6px; */
+  flex: 1;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}
+
+.input-row select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(31,111,235,0.08);
+  border-color: #1f6feb;
+}
+textarea {
+  height: 40px;               /* small like Figma */
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #e6e9ee;
+  border-radius: 6px;
+  resize: none;
+}
+.textarea-row {
+  height: 36px;              /* same as other inputs */
+}
+
+.textarea-row textarea {
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 13px;
+  padding: 6px;
+  background: transparent;
+  line-height: 20px;
+}
+
+.modal-form .form-group.full { width:100% }
+
+/* ACTIONS */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 8px 14px;
+  border-radius:6px;
+}
+
+.save {
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius:6px;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.16);
+}
+
+.close-icon { font-size:18px; cursor:pointer }
+/* Remove default calendar & clock icons */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Firefox fix */
+input[type="date"],
+input[type="time"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* @media (max-width: 600px) {
+  .form-row { flex-direction: column }
+  .input-row .icon { width:34px; height:34px }
+} */
+@media (max-width: 1024px) {
+  .modal {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 16px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .save, .cancel {
+    width: 100%;
+  }
+}
+
+
